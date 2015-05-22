@@ -7,7 +7,7 @@ navbar: 1
 {% for item in workshopPages %}
   {% if item.workshop %}
     <li>
-      <a href="{{ item.url }}">{{ item.title }}</a>
+      <a href="{{ site.base_url }}{{ item.url }}">{{ item.title }}</a>
     </li>
   {% endif %}
 {% endfor %}

@@ -16,7 +16,7 @@
       {% for item in navPages %}
         {% if item.navbar %}
           <li {% if item.url == page.url %}class="active"{% endif %}>
-            <a href="{{ item.url | replace:"index.html" }}">{{ item.title }}</a>
+            <a href="{{ site.base_url }}{{ item.url | replace:"index.html" }}">{{ item.title }}</a>
           </li>
         {% endif %}
       {% endfor %}
