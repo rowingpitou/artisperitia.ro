@@ -1,0 +1,14 @@
+---
+title: "Workshops"
+navbar: 0
+---
+<ul>
+{% assign workshopPages = site.pages | sort:"workshop" | reverse %}
+{% for item in workshopPages %}
+  {% if item.workshop %}
+    <li>
+      <a href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
