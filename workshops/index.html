@@ -1,11 +1,14 @@
 ---
-title: Workshops
+title: "Workshops"
 navbar: 1
 ---
 <ul>
-	<li>{% assign workshopPages = site.pages | sort:&quot;workshop&quot; | reverse %} {% for item in workshopPages %} {% if item.workshop %}</li>
-	<li><a href="{{ site.base_url }}{{ item.url }}">{{ item.title }}</a></li>
-	<li>{% endif %} {% endfor %}</li>
+{% assign workshopPages = site.pages | sort:"workshop" | reverse %}
+{% for item in workshopPages %}
+  {% if item.workshop %}
+    <li>
+      <a href="{{ site.base_url }}{{ item.url }}">{{ item.title }}</a>
+    </li>
+  {% endif %}
+{% endfor %}
 </ul>
-
-<p>ceva</p>
